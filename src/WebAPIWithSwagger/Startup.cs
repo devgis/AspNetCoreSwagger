@@ -61,16 +61,21 @@ namespace WebAPIWithSwagger
                     Type = SecuritySchemeType.ApiKey,
                 });
                 option.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
-        { new OpenApiSecurityScheme
-        {
-            Reference = new OpenApiReference()
+                {
+                    { new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference()
+                        {
+                            Id = "Bearer",
+                            Type = ReferenceType.SecurityScheme
+                        }
+                    }, Array.Empty<string>() }
+                });
+            });
+
+            services.AddSwaggerGen(c =>
             {
-                Id = "Bearer",
-                Type = ReferenceType.SecurityScheme
-            }
-        }, Array.Empty<string>() }
-    });
+                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
         }
 
