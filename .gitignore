@@ -1,5 +1,8 @@
-
-src/WebAPIWithSwagger/obj
-src/WebAPIWithSwagger/bin
 src/.vs/
-src/.vs/WebAPIWithSwagger/v16/.suo
+src/.vs/
+NSwagWebApplication/.vs/
+SwashbuckleWebApplication/.vs/
+NSwagWebApplication/SwaggerWebApplication/obj/
+NSwagWebApplication/SwaggerWebApplication/bin/
+SwashbuckleWebApplication/SwaggerWebApplication/obj/
+SwashbuckleWebApplication/SwaggerWebApplication/bin/
